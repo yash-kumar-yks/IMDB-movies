@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from 'react-router-dom';
 import "../styles/navbar.css";
 
 export default function Navbar({ setInputValue, inputValue, search }) {
@@ -8,7 +8,6 @@ export default function Navbar({ setInputValue, inputValue, search }) {
       <span className="heading">MOVIE DB</span>
       <input
         onChange={(e) => {
-          // inputValue = e.target.value; // wrong
           setInputValue(e.target.value);
         }}
         onKeyPress={search}
@@ -16,6 +15,9 @@ export default function Navbar({ setInputValue, inputValue, search }) {
         placeholder="Search..."
         className="search-bar"
       />
+      <Link to={`/playlist`}>
+       <button className="navbar-playlist"> My playlist</button>
+       </Link>
     </div>
   );
 }

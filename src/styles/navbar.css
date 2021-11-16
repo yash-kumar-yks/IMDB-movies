@@ -8,9 +8,19 @@
   
   .search-bar {
     outline: none;
-    border: none;
     background: none;
-  
+   border: 1px solid grey;
+   border-radius: 99px;
     background-color: #1b2634;
+    padding: 10px;
     color: #eee;
+  }
+  .navbar-playlist{
+    padding:4px;
+    background-color: rgb(47, 153, 148);
+    font-size:large;
+    border-radius: 20px;
+    padding-left:30px;
+    padding-right:30px;
+    cursor: pointer;
   }

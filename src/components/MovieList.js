@@ -9,7 +9,7 @@ export default function MovieList({ movieList, isLoading }) {
   } else {
     return (
       <div className="movie-list">
-        {movieList.map((movie) => (
+        {movieList && movieList.map((movie) => (
           <MovieCard movie={movie} key={movie.imdbID} />
         ))}
       </div>
