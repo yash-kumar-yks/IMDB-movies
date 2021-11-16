@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import { NavBar, MovieList } from "./components";
+import { Navbar, MovieList } from "./components";
 import axios from "axios";
 
 const API_BASE_URL = "https://www.omdbapi.com";
@@ -11,14 +11,9 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
-  /**
-   *
-   * function search(){
-   * }
-   */
+ 
   const search = async (e) => {
     if (e.code === "Enter") {
-      // https://www.omdbapi.com/?s=avatar&apikey=aa660442
       setIsLoading(true);
       const response = await axios.get(
         API_BASE_URL + "/?s=" + inputValue + "&apikey=aa660442"
@@ -31,14 +26,13 @@ function App() {
 
   return (
     <div className="main">
-      <NavBar
+      <Navbar
         search={search}
         inputValue={inputValue}
         setInputValue={setInputValue}
       />
       <MovieList isLoading={isLoading} movieList={movies} />
-      {/* {count} -> 1 */}
-      {/* MovieList */}
+   
     </div>
   );
 }

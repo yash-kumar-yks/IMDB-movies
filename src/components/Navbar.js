@@ -2,7 +2,7 @@ import React from "react";
 
 import "../styles/navbar.css";
 
-export default function NavBar({ setInputValue, inputValue, search }) {
+export default function Navbar({ setInputValue, inputValue, search }) {
   return (
     <div className="navbar">
       <span className="heading">MOVIE DB</span>
