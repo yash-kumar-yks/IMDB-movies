@@ -7,9 +7,11 @@
 .playlist-detail{
     margin-right: 2rem;
     margin-bottom: 2rem;
+    color:white
 }
 .playlist-card-button{
     width:100%;
+    margin:0;
     background-color: yellow;
     font-size:large
 }

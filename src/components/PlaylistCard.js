@@ -13,7 +13,7 @@ function PlaylistCard({user, id}) {
         <div className="playlist-detail" >
         <img  src={user.Poster}></img>
         <p>{user.Title}</p>
-        <p> {user.Year}</p>
+        <p> Year: {user.Year}</p>
         <button className="playlist-card-button" onClick={handleClick}>Remove</button>
         </div>
         </div>
