@@ -2,9 +2,7 @@ import "./App.css";
 import { useState, useEffect} from "react";
 import { Navbar, MovieList, Playlist } from "./components";
 import axios from "axios";
-import app from "./firebase";
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import firebase from "./firebase";
 
 /* npm install react-router-dom@5.2.0 */
 
@@ -13,12 +11,6 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [movies, setMovies] = useState([]);
   const [inputValue, setInputValue] = useState("");
-  const [user, setuser] = useState([])
-  useEffect(() => {
-   firebase.firestore().collection('users').get().then((snapshot =>{
-    console.log(snapshot.docs.map(doc=>doc.data())); 
-   }))
-  }, [])
 
   const search = async (e) => {
     if (e.code === "Enter") {

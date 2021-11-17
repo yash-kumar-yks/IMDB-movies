@@ -12,7 +12,7 @@ export default function MovieList({ movieList, isLoading }) {
     return (
       <div className="movie-list">
         {movieList && movieList.map((movie) => (
-          <MovieCard movie={movie} key={movie.imdbID} arr={arr} />
+          <MovieCard movie={movie} key={movie.imdbID}  />
         ))}
       </div>
     );

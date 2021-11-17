@@ -3,7 +3,7 @@ import firebase from "@firebase/app-compat";
 
 import "../styles/movie-card.css";
 
-export default function MovieCard({ movie, arr }) {
+export default function MovieCard({ movie }) {
   
   const handleClick=(e)=>{
     if(e.target.innerText==="+"){
@@ -15,14 +15,12 @@ export default function MovieCard({ movie, arr }) {
     });
       e.target.innerText="-";
       e.target.style.backgroundColor="yellow";
-      arr.push(movie);
+     
     }
     else{
       e.target.innerText="+";
       e.target.style.backgroundColor="lightgreen";
-      arr.map((data,index)=> {if(data == movie){
-        arr.splice(index, 1);
-      }})
+      
       
     }
   }
