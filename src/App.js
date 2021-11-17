@@ -3,7 +3,9 @@ import { useState, useEffect} from "react";
 import { Navbar, MovieList, Playlist } from "./components";
 import axios from "axios";
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-
+import Signup from "./components/Signup";
+import { AuthProvider } from "./contexts/AuthContext";
+import { Container } from "react-bootstrap"
 /* npm install react-router-dom@5.2.0 */
 
 function App() {
@@ -30,6 +32,7 @@ function App() {
    
 
     <Router>
+    <AuthProvider>
           <Switch>
             <Route exact path="/">
             <Navbar
@@ -42,8 +45,17 @@ function App() {
             <Route  path="/playlist">
            <Playlist />
             </Route>
+            
+            <Route  path="/signup">
+            <Container
+     
+      style={{ minHeight: "100vh", marginTop:"70px", width:"40%" }}
+    >
+           <Signup />
+           </Container>
+            </Route>
             </Switch>
-    
+    </AuthProvider>
           </Router>
     </div>
   );

@@ -5,9 +5,8 @@ function PlaylistCard({user, id}) {
     const history = useHistory();
     
     const handleClick=(e)=>{
-
-        e.stopPropagation();
    firebase.firestore().collection('users').doc(id).delete();
+   history.push('/');
   };
     return (
         <div>

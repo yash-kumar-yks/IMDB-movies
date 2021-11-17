@@ -13,15 +13,8 @@ export default function MovieCard({ movie }) {
         Title: movie.Title,
         Year:movie.Year
     });
-      e.target.innerText="-";
-      e.target.style.backgroundColor="yellow";
      
-    }
-    else{
-      e.target.innerText="+";
-      e.target.style.backgroundColor="lightgreen";
-      
-      
+     
     }
   }
   return (
