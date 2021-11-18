@@ -12,6 +12,7 @@
 .playlist-card-button{
     width:100%;
     margin:0;
+    color:black;
     background-color: yellow;
     font-size:large
 }

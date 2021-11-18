@@ -7,7 +7,6 @@ import Signup from "./components/Signup";
 import { AuthProvider } from "./contexts/AuthContext";
 import { Container } from "react-bootstrap";
 import Login from "./components/Login";
-import Dashboard from "./components/Dashboard";
 import PrivateRoute from "./components/PrivateRoute";
 /* npm install react-router-dom@5.2.0 */
 
