@@ -24,3 +24,7 @@
     padding-right:30px;
     cursor: pointer;
   }
+  .span-class{
+    font-size:large;
+    color:red;
+  }

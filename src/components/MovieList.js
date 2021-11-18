@@ -4,7 +4,6 @@ import "../styles/movie-list.css";
 import MovieCard from "./MovieCard";
 
 export default function MovieList({ movieList, isLoading }) {
-  const arr=[];
 
   if (isLoading) {
     return "Loading Movies please wait!";
